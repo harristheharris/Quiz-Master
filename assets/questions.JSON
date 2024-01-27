@@ -1,0 +1,95 @@
+// We intially were going to make each question a object within our js file. However, fuck that.
+{
+    "quizQuestions": [
+        {
+            "question1": {
+                "question": "All values in JavaScript are objects except...",
+                "answerA": {"A": "Bolean values", "truthValue": "false"},
+                "answerB": {"B": "Functions", "truthValue": "false"},
+                "answerC": {"C": "Primitave values", "truthValue": "true"},
+                "answerD": {"D": "Arrays", "truthValue": "false"}
+            },
+            "question2": {
+                "question": "Which of the following reads: 'THE RIGHT ANSWER'",
+                "answerA": {"A": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerB":{"B": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerC":{"C": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerD":{"D": "THE RIGHT ANSWER", "truthValue": "true"}
+
+                
+            },
+            "question3": {
+                "question": "Which of the following reads: 'THE RIGHT ANSWER'",
+                "answerA": {"A": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerB":{"B": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerC":{"C": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerD":{"D": "THE RIGHT ANSWER", "truthValue": "true"}
+
+                
+            },
+            "question4": {
+                "question": "Which of the following reads: 'THE RIGHT ANSWER'",
+                "answerA": {"A": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerB":{"B": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerC":{"C": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerD":{"D": "THE RIGHT ANSWER", "truthValue": "true"}
+
+                
+            },
+            "question5": {
+                "question": "Which of the following reads: 'THE RIGHT ANSWER'",
+                "answerA": {"A": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerB":{"B": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerC":{"C": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerD":{"D": "THE RIGHT ANSWER", "truthValue": "true"}
+
+                
+            },
+            "question6": {
+                "question": "Which of the following reads: 'THE RIGHT ANSWER'",
+                "answerA": {"A": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerB":{"B": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerC":{"C": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerD":{"D": "THE RIGHT ANSWER", "truthValue": "true"}
+
+                
+            },
+            "question7": {
+                "question": "Which of the following reads: 'THE RIGHT ANSWER'",
+                "answerA": {"A": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerB":{"B": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerC":{"C": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerD":{"D": "THE RIGHT ANSWER", "truthValue": "true"}
+
+                
+            },
+            "question8": {
+                "question": "Which of the following reads: 'THE RIGHT ANSWER'",
+                "answerA": {"A": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerB":{"B": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerC":{"C": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerD":{"D": "THE RIGHT ANSWER", "truthValue": "true"}
+
+                
+            },
+            "question9": {
+                "question": "Which of the following reads: 'THE RIGHT ANSWER'",
+                "answerA": {"A": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerB":{"B": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerC":{"C": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerD":{"D": "THE RIGHT ANSWER", "truthValue": "true"}
+
+                
+            },
+            "question10": {
+                "question": "Which of the following reads: 'THE RIGHT ANSWER'",
+                "answerA": {"A": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerB":{"B": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerC":{"C": "THE WRONG ANSWER", "truthValue": "false"},
+                "answerD":{"D": "THE RIGHT ANSWER", "truthValue": "true"}
+
+                
+            }
+        }
+    ]
+}
