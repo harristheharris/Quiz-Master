@@ -122,3 +122,9 @@ var quesArr = [question1 , question2];
     //A function that store the data to the browser (basically stores high scores but maybe we can also store answers to questions too.)
     
     //A function to grab the users intials when the game ends
+
+    // We intially were going to make each question a object within our js file. However, fuck that.
+    //Turns out JSON doesnt support comments??????? tf
+
+    //it took me ten years to figure out how to import the json lol
+    
