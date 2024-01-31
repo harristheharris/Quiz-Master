@@ -127,4 +127,6 @@ var quesArr = [question1 , question2];
     //Turns out JSON doesnt support comments??????? tf
 
     //it took me ten years to figure out how to import the json lol
+
+    //day  10 still cant figure this out
     

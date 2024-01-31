@@ -12,13 +12,18 @@ var strtGme = document.querySelector("#strt-bttn");
 var content = document.querySelector(".content");
 var secondsLeft = 10;
 
-
 //the function that runs once the start game button is pressed
 function quizTime() {
   //setTime();
 
+  const questionElement = document.getElementById("question");
+  const answerButton = document.getElementById("answer");
+  var content = document.getElementById("content");
+
+  //we go grab a question object
   var qAnda = questGrabber();
 
+  //and pick it apart :>
   console.log(qAnda);
   console.log(qAnda[0].questions);
   console.log(qAnda[0].questions.answers);
@@ -26,11 +31,47 @@ function quizTime() {
   var displayQanda = showQuestions(qAnda);
 
   function showQuestions(qAnda) {
-    console.log("We are in the showQuestions functions V V V V ")
-    console.log(qAnda);
 
+    var askQuestions = qAnda[0].questions.question;
+    var giveAnswers = qAnda[0].questions.answers;
+
+    console.log(giveAnswers);
+    document.getElementById("content").innerHTML = askQuestions;
+
+   /* answerGrabber(giveAnswers);
+
+     function answerGrabber(grabby) {
+      var grabAnswers = grabby
+      const questIndex = grabAnswers.indexOf(getRandom(grabAnswers));
+      console.log(questIndex);
+      const plchldr = grabAnswers.splice(questIndex, 1);
+
+      return plchldr;
+    }  */
+
+    document.getElementById("option1").innerHTML = giveAnswers[0].answerA.A;
+    console.log(giveAnswers[0].answerA.A);
+    document.getElementById("option2").innerHTML = giveAnswers[0].answerB.B;
+    console.log(giveAnswers[0].answerB.B);
+    document.getElementById("option3").innerHTML = giveAnswers[0].answerC.C;
+    console.log(giveAnswers[0].answerC.C);
+    document.getElementById("option4").innerHTML = giveAnswers[0].answerD.D;
+    console.log(giveAnswers[0].answerD.D);
+
+
+    // content.textContent = giveAnswers;
+
+    console.log("We are in the showQuestions functions V V V V ");
+    console.log(qAnda);
+    console.log(askQuestions);
+    console.log(giveAnswers);
+
+
+
+    return giveAnswers;
   };
 
+  console.log(displayQanda);
 
 
 
@@ -38,7 +79,7 @@ function quizTime() {
 
 };
 
-
+//try catch for iteration termination
 
 
 
@@ -48,6 +89,8 @@ function quizTime() {
 function questGrabber() {
   var grabQuestions = data.quizQuestions;
 
+  //WE are grabbing the the index of the object that is chosen and pulling out of the array. the only thing i don't get is how the array isn't updated back to the OG once we leave the functions and comes back
+  //this will come important when we try to figure out how each queston is displayed without repeats
 
   const questIndex = grabQuestions.indexOf(getRandom(grabQuestions));
   console.log(questIndex);
