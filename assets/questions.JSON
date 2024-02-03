@@ -6,7 +6,7 @@
                 "answers": [
                     {
                         "answerA": {
-                            "A": "Bolean values",
+                            "A": "Boolean values",
                             "truthValue": false
                         },
                         "answerB": {
