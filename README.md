@@ -102,6 +102,51 @@ console.log(question1 , question2);
 
 var quesArr = [question1 , question2];
 
+/* answerGrabber(giveAnswers);
+ 
+    function answerGrabber(grabby) {
+     var grabAnswers = grabby
+     const questIndex = grabAnswers.indexOf(getRandom(grabAnswers));
+     console.log(questIndex);
+     const plchldr = grabAnswers.splice(questIndex, 1);
+ 
+     return plchldr;
+   }  */
+
+  /* let answerOne = giveAnswers;
+  let answerOneTruth = giveAnswers;
+  document.getElementById("option1").innerHTML = giveAnswers[0].answerA.A;
+  console.log(giveAnswers[0].answerA.A);
+  console.log(answerOne + " This is the variable  .log");
+  console.log(answerOneTruth);
+
+  
+  let answerTwo = giveAnswers[0].answerB.B;
+  let answerTwoTruth = giveAnswers[0].answerB.truthValue;
+  document.getElementById("option2").innerHTML = giveAnswers[0].answerB.B;
+  console.log(giveAnswers[0].answerB.B);
+  console.log(answerTwo + " this is the variable .log");
+  console.log(answerTwoTruth);
+
+  let answerThree = giveAnswers[0].answerC.C;
+  let answerThreeTruth = giveAnswers[0].answerC.truthValue;
+  document.getElementById("option3").innerHTML = giveAnswers[0].answerC.C;
+  console.log(giveAnswers[0].answerC.C);
+  console.log(answerThree + " this is the variable .log");
+  console.log(answerThreeTruth);
+
+  let answerFour = giveAnswers[0].answerD.D;
+  let answerFourTruth = giveAnswers[0].answerD.truthValue;
+  document.getElementById("option4").innerHTML = giveAnswers[0].answerD.D;
+  console.log(giveAnswers[0].answerD.D);
+  console.log(answerFour + " this is the variable .log");
+  console.log(answerFourTruth); */
+
+
+
+
+  // content.textContent = giveAnswers;
+
 
 //Functions
 

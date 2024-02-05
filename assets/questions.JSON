@@ -4,24 +4,12 @@
             "questions": {
                 "question": "01All values in JavaScript are objects except...",
                 "answers": [
-                    {
-                        "answerA": {
-                            "A": "Boolean values",
-                            "truthValue": false
-                        },
-                        "answerB": {
-                            "B": "Functions",
-                            "truthValue": false
-                        },
-                        "answerC": {
-                            "C": "Primitave values",
-                            "truthValue": true
-                        },
-                        "answerD": {
-                            "D": "Arrays",
-                            "truthValue": false
-                        }
-                    }
+                    
+                    {"text": "Functions", "truthValue":false},
+                    {"text": "Arrays", "truthValue": false},
+                    {"text": "Primative Values", "truthValue": true},
+                    {"text": "Boolean Values", "truthValue":false }
+                    
                 ]
             }
         },
@@ -29,49 +17,22 @@
             "questions": {
                 "question": "02Which of the following reads: 'THE RIGHT ANSWER'",
                 "answers": [
-                    {
-                        "answerA": {
-                            "A": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerB": {
-                            "B": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerC": {
-                            "C": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerD": {
-                            "D": "THE RIGHT ANSWER",
-                            "truthValue": true
-                        }
-                    }
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE RIGHT ANSWER", "truthValue":true}
                 ]
+                
             }
         },
         {
             "questions": {
                 "question": "03Which of the following reads: 'THE RIGHT ANSWER'",
                 "answers": [
-                    {
-                        "answerA": {
-                            "A": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerB": {
-                            "B": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerC": {
-                            "C": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerD": {
-                            "D": "THE RIGHT ANSWER",
-                            "truthValue": true
-                        }
-                    }
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE RIGHT ANSWER", "truthValue":true}
                 ]
             }
         },
@@ -79,24 +40,10 @@
             "questions": {
                 "question": "04Which of the following reads: 'THE RIGHT ANSWER'",
                 "answers": [
-                    {
-                        "answerA": {
-                            "A": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerB": {
-                            "B": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerC": {
-                            "C": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerD": {
-                            "D": "THE RIGHT ANSWER",
-                            "truthValue": true
-                        }
-                    }
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE RIGHT ANSWER", "truthValue":true}
                 ]
             }
         },
@@ -104,24 +51,10 @@
             "questions": {
                 "question": "05Which of the following reads: 'THE RIGHT ANSWER'",
                 "answers": [
-                    {
-                        "answerA": {
-                            "A": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerB": {
-                            "B": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerC": {
-                            "C": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerD": {
-                            "D": "THE RIGHT ANSWER",
-                            "truthValue": true
-                        }
-                    }
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE RIGHT ANSWER", "truthValue":true}
                 ]
             }
         },
@@ -129,24 +62,10 @@
             "questions": {
                 "question": "06Which of the following reads: 'THE RIGHT ANSWER'",
                 "answers": [
-                    {
-                        "answerA": {
-                            "A": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerB": {
-                            "B": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerC": {
-                            "C": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerD": {
-                            "D": "THE RIGHT ANSWER",
-                            "truthValue": true
-                        }
-                    }
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE RIGHT ANSWER", "truthValue":true}
                 ]
             }
         },
@@ -154,24 +73,10 @@
             "questions": {
                 "question": "07Which of the following reads: 'THE RIGHT ANSWER'",
                 "answers": [
-                    {
-                        "answerA": {
-                            "A": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerB": {
-                            "B": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerC": {
-                            "C": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerD": {
-                            "D": "THE RIGHT ANSWER",
-                            "truthValue": true
-                        }
-                    }
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE RIGHT ANSWER", "truthValue":true}
                 ]
             }
         },
@@ -179,24 +84,10 @@
             "questions": {
                 "question": "08Which of the following reads: 'THE RIGHT ANSWER'",
                 "answers": [
-                    {
-                        "answerA": {
-                            "A": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerB": {
-                            "B": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerC": {
-                            "C": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerD": {
-                            "D": "THE RIGHT ANSWER",
-                            "truthValue": true
-                        }
-                    }
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE RIGHT ANSWER", "truthValue":true}
                 ]
             }
         },
@@ -204,24 +95,10 @@
             "questions": {
                 "question": "09Which of the following reads: 'THE RIGHT ANSWER'",
                 "answers": [
-                    {
-                        "answerA": {
-                            "A": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerB": {
-                            "B": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerC": {
-                            "C": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerD": {
-                            "D": "THE RIGHT ANSWER",
-                            "truthValue": true
-                        }
-                    }
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE RIGHT ANSWER", "truthValue":true}
                 ]
             }
         },
@@ -229,24 +106,10 @@
             "questions": {
                 "question": "10Which of the following reads: 'THE RIGHT ANSWER'",
                 "answers": [
-                    {
-                        "answerA": {
-                            "A": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerB": {
-                            "B": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerC": {
-                            "C": "THE WRONG ANSWER",
-                            "truthValue": false
-                        },
-                        "answerD": {
-                            "D": "THE RIGHT ANSWER",
-                            "truthValue": true
-                        }
-                    }
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE WRONG ANSWER", "truthValue":false},
+                    {"text": "THE RIGHT ANSWER", "truthValue":true}
                 ]
             }
         }

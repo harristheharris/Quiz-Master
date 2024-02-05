@@ -4,145 +4,173 @@
 /* fetch(/assets/questions.JSON); */
 
 import data from './questions.json' assert {type: 'json'};
+
 console.log(data);
 console.log(data.quizQuestions[2]);
 
+let score = 0;
 var timer = document.getElementById("timer");
 var strtGme = document.getElementById("strt-bttn");
 // var content = document.querySelector(".content");
-var secondsLeft = 10;
+var secondsLeft = 60;
 
 //the function that runs once the start game button is pressed
 function quizTime() {
-  //setTime();
+  setTime();
+  score = 0;
 
+  console.log(score);
   const questionElement = document.getElementById("question");
   const answerButton = document.getElementById("answer");
   // var content = document.getElementById("content");
 
+  document.getElementById("strt-bttn").innerHTML = "";//this is going to throw an error becuase when the program loops and tries to run this line again, there is no strt-bttn to speak of. We already got rid of it. Until I see othewise, I am going to just leave this as it does not have any effect on our code (I think lol)
+  //update: this was originallin in showQuestion. However, because it was throwing an error, our try catch block was always going directly to catch lol. We do not need this to loop so we took it out and have put it here before we start looping
+  master();
 
-  //we go grab a question object
-  var qAnda = questGrabber();
+}
 
-  //and pick it apart :>
-  console.log(qAnda);
-  console.log(qAnda[0].questions);
-  console.log(qAnda[0].questions.answers);
+function master() {
 
-  var displayQanda = showQuestions(qAnda);
+  // console.log(score);
 
-  console.log(displayQanda);
 
+  //I wanna try a try/catch block as i know the quiz will error once we run out of questions from our JSON file
+  //our catch block will bring us to a GAME OVER function that will log our score and intials within the client side storage
+  try {
+    //we go grab a question object
+
+
+    var qAnda = questGrabber();
+
+    //and pick it apart :>
+    // console.log(qAnda);
+    // console.log(qAnda[0].questions);
+    // console.log(qAnda[0].questions.answers);
+
+    var displayQanda = showQuestions(qAnda);
+    console.log(displayQanda);
+
+  }
+   catch {
+
+    // console.log("poop version 2"); 
+    gameOver();   
+  } 
 
 };
 
-//try catch for iteration termination
+function gameOver (){
+ 
+  console.log("GAME OVER");
+  var bigTup = document.getElementById("big-tup");
+  var insideTup = document.getElementById("inside-tup");
+  document.getElementById("inside-tup").innerHTML = "";
+  var yum = document.createElement("div");
+  var yummy = document.createElement("div");
+  //bigTup.textContent = "GAME OVER";
+  
+  document.getElementById("big-tup").insertAdjacentHTML('afterbegin', 'GAME OVER');
+  document.getElementById("big-tup").insertAdjacentElement('beforeend', yum);
+  yum.textContent = " you answered " + score + " questions correctly";
+  var aCh = prompt("Score: " + score + "   -Insert Name Below-");
+  // let userObj = {"score": score, "name": aCh}; //I can do this an easier way that doesnt require JSON Stringify. Won't be as cool tho
+
+  var nAs = aCh + ": " + score; //I hope javascript just coierces this into a string 
+  localStorage.setItem("nameAndscore", nAs);
+  var subScore = localStorage.getItem("nameAndscore");
+  console.log(subScore); //Jesus christ we finally did it aka we got stuff in our storage object now
+  document.getElementById("big-tup").insertAdjacentHTML('beforeend', 'HighScores:');
+  document.getElementById("big-tup").insertAdjacentElement('afterend', yummy);
+  yummy.textContent = subScore;
+  yummy.textContent = subScore;
+
+
+ 
+
+  
+
+
+
+
+}
 
 function showQuestions(qAnda) {
 
+
   var askQuestions = qAnda[0].questions.question;
   var giveAnswers = qAnda[0].questions.answers;
+  const answerButton = document.getElementById("ansBtn");
+  console.log(answerButton);
 
-  console.log(giveAnswers);
+  giveAnswers.forEach(answer => {
+    const button = document.createElement("button");
+    console.log(button);
+    button.innerHTML = answer.text;
+    button.classList.add("btn");
+    answerButton.appendChild(button);
+
+    if (answer.truthValue) {
+      button.dataset.truthValue = answer.truthValue;
+    }
+
+    button.addEventListener("click", grabbyAnswer);
+
+  });
+
+  /*  console.log(askQuestions); //prints the function
+   console.log(giveAnswers);//prints the answers */
   document.getElementById("content").innerHTML = askQuestions;
-  document.getElementById("strt-bttn").innerHTML = "";
-  /* answerGrabber(giveAnswers);
- 
-    function answerGrabber(grabby) {
-     var grabAnswers = grabby
-     const questIndex = grabAnswers.indexOf(getRandom(grabAnswers));
-     console.log(questIndex);
-     const plchldr = grabAnswers.splice(questIndex, 1);
- 
-     return plchldr;
-   }  */
-  console.log(giveAnswers[0][0]);
-
-  let answerOne = giveAnswers[0].answerA.A;
-  let answerOneTruth = giveAnswers[0].answerA.truthValue;
-  document.getElementById("option1").innerHTML = giveAnswers[0].answerA.A;
-  console.log(giveAnswers[0].answerA.A);
-  console.log(answerOne + " This is the variable  .log");
-  console.log(answerOneTruth);
-
   
-  let answerTwo = giveAnswers[0].answerB.B;
-  let answerTwoTruth = giveAnswers[0].answerB.truthValue;
-  document.getElementById("option2").innerHTML = giveAnswers[0].answerB.B;
-  console.log(giveAnswers[0].answerB.B);
-  console.log(answerTwo + " this is the variable .log");
-  console.log(answerTwoTruth);
-
-  let answerThree = giveAnswers[0].answerC.C;
-  let answerThreeTruth = giveAnswers[0].answerC.truthValue;
-  document.getElementById("option3").innerHTML = giveAnswers[0].answerC.C;
-  console.log(giveAnswers[0].answerC.C);
-  console.log(answerThree + " this is the variable .log");
-  console.log(answerThreeTruth);
-
-  let answerFour = giveAnswers[0].answerD.D;
-  let answerFourTruth = giveAnswers[0].answerD.truthValue;
-  document.getElementById("option4").innerHTML = giveAnswers[0].answerD.D;
-  console.log(giveAnswers[0].answerD.D);
-  console.log(answerFour + " this is the variable .log");
-  console.log(answerFourTruth);
 
 
-
-
-  // content.textContent = giveAnswers;
-
-  console.log("We are in the showQuestions functions V V V V ");
+  // console.log(giveAnswers);
+  /* console.log("We are in the showQuestions functions V V V V ");
   console.log(qAnda);
   console.log(askQuestions);
   console.log(giveAnswers);
+ */
+
+  function reset() {
+  
+    console.log("poop");
+    while (answerButton.firstChild) {
+      answerButton.removeChild(answerButton.firstChild);
+    }
+  };
+  
+  function grabbyAnswer(e) {
+
+    const slctBtn = e.target;
+    const isCorrect = slctBtn.dataset.truthValue === "true";
+    console.log(isCorrect);
+    // console.log(slctBtn);
 
 
+    if (isCorrect) {
+      console.log("correct");
+      
 
-  var option = document.getElementById("option1");
-  var option2 = document.getElementById("option2");
-  var option3 = document.getElementById("option3");
-  var option4 = document.getElementById("option4");
-  console.log(option4);
-
-
-
-
-  option.addEventListener("click", kidKool);
-  option2.addEventListener("click", kidKool);
-  option3.addEventListener("click", kidKool);
-  option4.addEventListener("click", kidKool);
-
-
-
-  //We had to bring him out
+      reset();
+      score++;
+      master();
+    }
+    else {
+      console.log("incorrect");
+      
+      reset();
+      master();
+    }
 
 
-  function kidKool(event) {
-    var clickedAnswer = event.currentTarget;
-    console.log(clickedAnswer);
-    console.log("This is kidkool Motherbase! And we're out of the woods! Do you copy MB!? Do you copy!? ");
-   
-      if (giveAnswers == true) {
+  }
 
-        var value = "right";
-        console.log(value);
-      }
 
-      else {
-        var value = "wrong";
-        console.log(value);
-      }
-      console.log("We hear ya kid, loud and clear, and ya better hop to it quick, cause there's boogies on ya tail!");
-    
-    return value;
-  } //end of kidKool function
 
   return giveAnswers;
+
+  
 };
-
-
-
 
 function questGrabber() {
   var grabQuestions = data.quizQuestions;
@@ -189,6 +217,7 @@ function setTime() {
     if (secondsLeft === 0) {
       // Stops execution of action at set interval
       clearInterval(timerInterval);
+      gameOver();
 
     }
 
