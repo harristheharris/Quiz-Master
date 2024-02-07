@@ -13,7 +13,7 @@ var timer = document.getElementById("timer");
 var strtGme = document.getElementById("strt-bttn");
 // var content = document.querySelector(".content");
 var secondsLeft = 60;
-
+var questionsLeft = true
 //the function that runs once the start game button is pressed
 function quizTime() {
   setTime();
@@ -53,46 +53,65 @@ function master() {
 
   }
    catch {
-
+    questionsLeft = false;
     // console.log("poop version 2"); 
-    gameOver();   
+    // gameOver();   
   } 
 
 };
 
-function gameOver (){
- 
+function loadScores(){
+  var savedScores = JSON.parse(localStorage.getItem("saved-scores"))
+  if(savedScores === null || savedScores.length ==0){
+    return
+  }
+  //render my stuff
+}
+
+function gameOver (){ 
   console.log("GAME OVER");
-  var bigTup = document.getElementById("big-tup");
-  var insideTup = document.getElementById("inside-tup");
   document.getElementById("inside-tup").innerHTML = "";
+  var containerEl = document.getElementById("big-tup");
   var yum = document.createElement("div");
   var yummy = document.createElement("div");
-  //bigTup.textContent = "GAME OVER";
+  //containerEl.textContent = "GAME OVER";
   
-  document.getElementById("big-tup").insertAdjacentHTML('afterbegin', 'GAME OVER');
-  document.getElementById("big-tup").insertAdjacentElement('beforeend', yum);
+  containerEl.insertAdjacentHTML('afterbegin', 'GAME OVER');
+  containerEl.insertAdjacentElement('beforeend', yum);
   yum.textContent = " you answered " + score + " questions correctly";
-  var aCh = prompt("Score: " + score + "   -Insert Name Below-");
+  loadScores()
   // let userObj = {"score": score, "name": aCh}; //I can do this an easier way that doesnt require JSON Stringify. Won't be as cool tho
+  if(confirm("Wouuld you like to save a score")){
+    var aCh = prompt("Score: " + score + "   -Insert Name Below-");
+    var scoreToSave = {
+      name: aCh,
+      score: score
+    }
+    saveScore(scoreToSave)
 
+  }
   var nAs = aCh + ": " + score; //I hope javascript just coierces this into a string 
   localStorage.setItem("nameAndscore", nAs);
   var subScore = localStorage.getItem("nameAndscore");
   console.log(subScore); //Jesus christ we finally did it aka we got stuff in our storage object now
-  document.getElementById("big-tup").insertAdjacentHTML('beforeend', 'HighScores:');
-  document.getElementById("big-tup").insertAdjacentElement('afterend', yummy);
+  containerEl.insertAdjacentHTML('beforeend', 'HighScores:');
+  containerEl.insertAdjacentElement('afterend', yummy);
   yummy.textContent = subScore;
   yummy.textContent = subScore;
 
 
- 
-
-  
+}
 
 
-
-
+function saveScore(newScore){
+  // we need to put it into a list
+  var savedScores = JSON.parse(localStorage.getItem("saved-scores"))
+  if(savedScores === null){
+    localStorage.setItem("saved-scores", JSON.stringify([newScore]))
+    return
+  }
+  savedScores.push(newScore)  
+  localStorage.setItem("saved-scores", JSON.stringify(savedScores))
 }
 
 function showQuestions(qAnda) {
@@ -132,8 +151,7 @@ function showQuestions(qAnda) {
  */
 
   function reset() {
-  
-    console.log("poop");
+
     while (answerButton.firstChild) {
       answerButton.removeChild(answerButton.firstChild);
     }
@@ -157,7 +175,7 @@ function showQuestions(qAnda) {
     }
     else {
       console.log("incorrect");
-      
+      secondsLeft -=5
       reset();
       master();
     }
@@ -181,9 +199,6 @@ function questGrabber() {
   const questIndex = grabQuestions.indexOf(getRandom(grabQuestions));
   // console.log(questIndex);
   const plchldr = grabQuestions.splice(questIndex, 1);
-
-
-
   // var rndQuestion = getRandom(grabQuestions);
   // console.log(grabQuestions[0]);
   // console.log(rndQuestion);
@@ -212,9 +227,11 @@ function setTime() {
 
     secondsLeft--;
     timer.textContent = secondsLeft;
-    console.log(secondsLeft);
-
-    if (secondsLeft === 0) {
+    // console.log(secondsLeft);
+    // condition1 = out of time
+    // condition2 = done with the quiz/ out of questions
+    // if (condition1     condition2)
+    if (secondsLeft <= 0 || questionsLeft === false ){
       // Stops execution of action at set interval
       clearInterval(timerInterval);
       gameOver();
@@ -225,5 +242,11 @@ function setTime() {
 
 }
 
-
 strtGme.addEventListener("click", quizTime);
+
+var nums = [1,2,3]
+console.log(nums)
+var newNums = nums.push(4)
+
+console.log(newNums)
+console.log(nums)
