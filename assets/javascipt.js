@@ -94,7 +94,7 @@ function gameOver (){
   console.log(subScore); 
   containerEl.insertAdjacentHTML('beforeend', 'HighScores:');
   containerEl.insertAdjacentElement('afterend', yummy);
-  yummy.textContent = subScore;
+  
 
   for (var i = 0; i < loaded.length; i++){
     console.log(loaded[i]);
