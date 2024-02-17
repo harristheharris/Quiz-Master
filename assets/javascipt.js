@@ -1,6 +1,6 @@
 
 
-import data from './questions.JSON' assert {type: 'json'};
+import data from '/assets/questions.JSON' assert {type: 'json'};
 
 console.log(data);
 console.log(data.quizQuestions[2]);
